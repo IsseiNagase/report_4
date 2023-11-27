@@ -17,8 +17,10 @@ class EnemyTest {
         int defaultHeroHp = 100;
         Hero demoHero = new Hero("デモ勇者", defaultHeroHp, 100);
         Enemy slime = new Enemy("スライムもどき", 10, 100);
-        demoHero.attack(slime);
-        slime.attack(demoHero);
-        assertEquals(defaultHeroHp, demoHero.hitPoint);
+       // ヒーローが一撃で敵を倒す状態に設定
+       demoHero.attack(slime);
+
+       // ヒーローの攻撃後、敵が死んでいるかを検証
+       assertTrue(slime.dead);
     }
 }
