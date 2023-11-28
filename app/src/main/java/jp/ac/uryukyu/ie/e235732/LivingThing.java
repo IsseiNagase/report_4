@@ -7,7 +7,7 @@ public class LivingThing {
     private String name;
     private int hitPoint;
     private int attack;
-    private boolean dead;
+    public boolean dead;
 
     /**
      * コンストラクタ。名前、最大HP、攻撃力を指定する。
@@ -59,5 +59,9 @@ public class LivingThing {
             dead = true;
             System.out.printf("%sは倒れた。\n", name);
         }
+    }
+
+    public Integer getHitPoint() {
+        return null;
     }
 }

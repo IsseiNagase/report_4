@@ -1,17 +1,17 @@
-package jp.ac.uryukyu.ie.e235732;
+
 
 /**
- * 敵クラス。
+ * 戦士クラス。
  */
-public class Enemy extends LivingThing {
+public class Warrior extends LivingThing {
 
     /**
      * コンストラクタ。名前、最大HP、攻撃力を指定する。
-     * @param name 敵の名前
-     * @param maximumHP 敵のHP
-     * @param attack 敵の攻撃力
+     * @param name 戦士名
+     * @param maximumHP 戦士のHP
+     * @param attack 戦士の攻撃力
      */
-    public Enemy(String name, int maximumHP, int attack) {
+    public Warrior(String name, int maximumHP, int attack) {
         super(name, maximumHP, attack);
     }
 
@@ -25,7 +25,11 @@ public class Enemy extends LivingThing {
         opponent.wounded(damage);
     }
 
-    private double getAttack() {
+    public Object getName() {
+        return null;
+    }
+
+    double getAttack() {
         return 0;
     }
 }
